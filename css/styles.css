@@ -45,6 +45,7 @@ body {
 .social-icons {
     display: flex;
     align-items: center;
+    margin-right: 50px; 
 }
 
 .social-icons a {

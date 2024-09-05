@@ -6,11 +6,45 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Top Bar for language switcher and social icons */
+.top-bar {
+    display: flex;
+    justify-content: space-between; /* Ensure space between language switcher and social icons */
+    align-items: center; /* Align items (icons and flags) in the center */
+    padding: 10px 20px;
+    position: fixed; /* Changed to fixed to keep the bar at the top while scrolling */
+    top: 0;
+    width: 100%;
+    background-color: #ffffff; /* Background for the top bar */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure it stays on top */
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+    transition: color 0.3s ease;
+    margin-right: 15px;
+}
+
+.language-switcher button:hover {
+    color: #000;
+}
+
 /* Social Icons */
 .social-icons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .social-icons a {
@@ -28,7 +62,7 @@ body {
 .container {
     display: flex;
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 80px auto; /* Adjusted margin to provide space for the top bar */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -90,8 +124,7 @@ a:hover {
 .skill-categories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; 
-    gap: 25px; 
+    gap: 25px; /* Added gap property for spacing between items */
     margin-top: 20px;
 }
 
@@ -99,7 +132,7 @@ a:hover {
     background-color: #f8f9fa;
     padding: 15px;
     border-radius: 8px;
-    width: calc(30% - 25px); 
+    width: calc(30% - 25px); /* Adjusted width to account for the gap */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
@@ -113,6 +146,7 @@ a:hover {
 .skill-category ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Added margin reset */
 }
 
 .skill-category ul li {

@@ -164,28 +164,59 @@ a:hover {
     color: #000;
 }
 
-/* --- Interests Section --- */
-.interests {
-    margin-top: 30px;
-}
-
+/* Interests Section */
 .interests h2 {
-    font-size: 22px;
+    font-size: 36px;
+    margin-bottom: 10px;
     color: #333;
-    margin-bottom: 20px;
 }
 
-.interests-grid {
+.interests p {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 50px;
+}
+
+/* Grid Layout for Interests */
+.interest-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid layout for responsive design */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    align-items: center;
 }
 
+/* Individual Interest Items */
 .interest-item {
     text-align: center;
-    padding: 15px;
-    background-color: #f8f9fa; /* Keep same color as other sections */
-    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.interest-item:hover {
+    transform: translateY(-10px);
+}
+
+.interest-item i {
+    font-size: 48px;
+    color: #36b5b0;
+    margin-bottom: 15px;
+}
+
+.interest-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.interest-item p {
+    font-size: 16px;
+    color: #777;
+}
+
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Same shadow effect as skill section */
 }
 

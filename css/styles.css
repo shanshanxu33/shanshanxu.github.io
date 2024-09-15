@@ -12,12 +12,12 @@ body {
     justify-content: space-between; /* Ensure space between language switcher and social icons */
     align-items: center; /* Align items (icons and flags) in the center */
     padding: 10px 20px;
-    position: fixed; /* Changed to fixed to keep the bar at the top while scrolling */
+    position: fixed; /* Keep the bar at the top while scrolling */
     top: 0;
     width: 100%;
-    background-color: #ffffff; /* Background for the top bar */
+    background-color: #ffffff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Ensure it stays on top */
+    z-index: 10;
 }
 
 /* Language Switcher */
@@ -163,3 +163,46 @@ a:hover {
     font-size: 20px;
     color: #000;
 }
+
+/* --- Interests Section --- */
+.interests {
+    margin-top: 30px;
+}
+
+.interests h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid layout for responsive design */
+    gap: 20px;
+}
+
+.interest-item {
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f9fa; /* Keep same color as other sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Same shadow effect as skill section */
+}
+
+.interest-item i {
+    font-size: 40px;
+    color: #50b5d6; /* Adjust this if needed to match the icon color from your design */
+}
+
+.interest-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #444; /* Matching the header color with the overall design */
+}
+
+.interest-item p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+

@@ -165,48 +165,33 @@ a:hover {
 } 
 
 /* Interests Section */
-.interests {
-    margin-top: 30px;
-}
-
-.interests h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: left;
-}
-
-/* Grid Layout for Interests */
 .interest-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Create responsive grid with auto-fitting columns */
-    gap: 20px; /* Space between grid items */
-    margin-top: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+    grid-gap: 40px;
+    justify-items: center;  
 }
 
-/* Individual Interest Items */
 .interest-category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
     text-align: center;
-    width: 100%; /* Ensure full width of grid item */
+    max-width: 250px; 
 }
-
 
 .interest-category i {
-    font-size: 40px;
-    color: #50b5d6; /* Icon color */
+    font-size: 50px;
+    color: #87CEEB; 
+    margin-bottom: 10px;
+}
+
+.interest-category h3 {
+    font-size: 1.5em;
+    color: #333;
     margin-bottom: 10px;
 }
 
 .interest-category p {
-    font-size: 16px;
-    color: #444;
-    margin-top: 10px;
+    font-size: 1em;
+    color: #666;
 }

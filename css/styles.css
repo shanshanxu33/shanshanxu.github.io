@@ -176,15 +176,16 @@ a:hover {
 /* Grid layout for interest categories */
 .interest-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid with minimum column size */
-    grid-gap: 40px;
-    justify-items: center; /* Centers grid items */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+    grid-row-gap: 20px; /* Added vertical spacing between rows */
+    justify-items: center;  
 }
+
 
 /* Individual interest category styling */
 .interest-category {
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 0px;
+    padding: 0px;
     text-align: center;
     max-width: 250px; /* Restricts the width */
 }

@@ -1,165 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Base Styles */
+/* Setting the font for the body and basic margin, padding, and background color */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Webpage</title>
-    <!-- 引入 Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+/* Top Bar for language switcher and social icons */
+/* Creating a top navigation bar with language switcher and social icons */
+.top-bar {
+    display: flex;
+    justify-content: space-between; /* Distributes space between language switcher and social icons */
+    align-items: center; /* Vertically aligns items */
+    padding: 10px 20px; /* Padding around the top bar */
+    position: fixed; /* Fixed position keeps the bar at the top when scrolling */
+    top: 0;
+    width: 100%; /* Full-width bar */
+    background-color: #ffffff; /* White background for the top bar */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    z-index: 10; /* Ensures the top bar stays above other content */
+}
 
-<body>
-    <!-- Container for both language switcher and social icons -->
-    <div class="top-bar">
-        <div class="language-switcher">
-            <button onclick="switchLanguage('en')">🇺🇸</button>
-            <button onclick="switchLanguage('de')">🇩🇪</button>
-        </div>
+/* Language Switcher */
+/* Styling for the language switch buttons */
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
 
-        <div class="social-icons">
-            <a href="https://x.com/clara_hsu533" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/clara-hsu-350a2a2b5/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/shanshanxu33" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-    </div>
+.language-switcher button {
+    background-color: transparent; /* No background for buttons */
+    border: none;
+    padding: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 20px;
+    color: #555; /* Medium gray text color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    margin-right: 15px; /* Space between buttons */
+}
 
-    <div class="container">
-        <div class="sidebar">
-            <img src="img/photo.jpg" alt="Clara Hsu" class="profile-img">
-            <h1>Clara Hsu</h1>
-        </div>
+.language-switcher button:hover {
+    color: #000; /* Turns black on hover */
+}
 
-        <div class="content">
-            <section class="about-me">
-                <h2 data-lang-en="About me" data-lang-de="Über mich">About me</h2>
-                <p data-lang-en="I love exploratory data analysis and enjoy uncovering surprising new trends in the data."
-                    data-lang-de="Ich liebe explorative Datenanalyse und freue mich darüber, überraschende neue Trends in den Daten zu entdecken.">
-                    I love exploratory data analysis and enjoy uncovering surprising new trends in the data.</p>
-            </section>
+/* Social Icons */
+/* Styling for social media icons */
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 50px; /* Right margin to separate from other elements */
+}
 
-            <section class="background">
-                <h2 data-lang-en="Background" data-lang-de="Hintergrund">Background</h2>
-                <p data-lang-en="Coming soon..."
-                    data-lang-de="...">Coming soon...
-                </p>
-            </section>
+.social-icons a {
+    margin-left: 15px; /* Space between icons */
+    color: #555; /* Medium gray icon color */
+    font-size: 24px;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
 
-            <section class="skills">
-                <h2 data-lang-en="Skills" data-lang-de="Fähigkeiten">Skills</h2>
-                <div class="skill-categories">
-                    <!-- Frontend Basic Skills -->
-                    <div class="skill-category">
-                        <h3 data-lang-en="Frontend Basic" data-lang-de="Frontend-Grundlagen">Frontend Basic</h3>
-                        <ul>
-                            <li><i class="fab fa-js"></i> <span data-lang-en="JavaScript"
-                                    data-lang-de="JavaScript">JavaScript</span></li>
-                            <li><i class="fab fa-css3-alt"></i> <span data-lang-en="CSS3"
-                                    data-lang-de="CSS3">CSS3</span></li>
-                            <li><i class="fab fa-html5"></i> <span data-lang-en="HTML5"
-                                    data-lang-de="HTML5">HTML5</span></li>
-                            <li><i class="fas fa-database"></i> <span data-lang-en="JSON"
-                                    data-lang-de="JSON">JSON</span></li>
-                        </ul>
-                    </div>
+.social-icons a:hover {
+    color: #000; /* Turns black on hover */
+}
 
-                    <!-- Frontend Frameworks -->
-                    <div class="skill-category">
-                        <h3 data-lang-en="Frontend Frameworks" data-lang-de="Frontend-Frameworks">Frontend Frameworks
-                        </h3>
-                        <ul>
-                            <li><i class="fab fa-vuejs"></i> <span data-lang-en="Vue.js"
-                                    data-lang-de="Vue.js">Vue.js</span></li>
-                            <li><i class="fab fa-react"></i> <span data-lang-en="React"
-                                    data-lang-de="React">React</span></li>
-                            <li><i class="fab fa-angular"></i> <span data-lang-en="Angular"
-                                    data-lang-de="Angular">Angular</span></li>
-                        </ul>
-                    </div>
+/* Container Layout */
+/* Main content container layout */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 80px auto; /* Centers the container and adds space for the top bar */
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
 
-                    <!-- Frontend Styles -->
-                    <div class="skill-category">
-                        <h3 data-lang-en="Frontend Styles" data-lang-de="Frontend-Stile">Frontend Styles</h3>
-                        <ul>
-                            <li><i class="fab fa-bootstrap"></i> <span data-lang-en="Bootstrap"
-                                    data-lang-de="Bootstrap">Bootstrap</span></li>
-                        </ul>
-                    </div>
+/* Sidebar */
+/* Sidebar styling for profile section */
+.sidebar {
+    width: 300px;
+    background-color: #f8f9fa; /* Light gray sidebar */
+    padding: 30px;
+    text-align: center;
+    border-right: 1px solid #ddd; /* Border on the right */
+}
 
-                    <!-- Backend Languages -->
-                    <div class="skill-category">
-                        <h3 data-lang-en="Backend Programming" data-lang-de="Backend-Programmierung">Backend Programming
-                        </h3>
-                        <ul>
-                            <li><i class="fab fa-python"></i> <span data-lang-en="Python"
-                                    data-lang-de="Python">Python</span></li>
-                            <li><i class="fab fa-java"></i> <span data-lang-en="Java" data-lang-de="Java">Java</span>
-                            </li>
-                            <li><i class="fas fa-code"></i> <span data-lang-en="C++" data-lang-de="C++">C++</span></li>
-                        </ul>
-                    </div>
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular profile image */
+    margin-bottom: 20px;
+}
 
-                    <!-- Statistics -->
-                    <div class="skill-category">
-                        <h3 data-lang-en="Statistics" data-lang-de="Statistik">Statistics</h3>
-                        <ul>
-                            <li><i class="fab fa-r-project"></i> <span data-lang-en="R" data-lang-de="R">R</span></li>
-                            <li><img src="img/icon.svg" alt="Julia"
-                                    style="width: 25px; height: 25px; margin-right: 8px;"> <span data-lang-en="Julia"
-                                    data-lang-de="Julia">Julia</span></li>
-                            <li><i class="fas fa-project-diagram"></i> <span data-lang-en="Computational Modeling"
-                                    data-lang-de="Computermodellierung">Computational Modeling</span></li>
-                            <li><i class="fas fa-database"></i> <span data-lang-en="Data Analysis"
-                                    data-lang-de="Datenanalyse">Data Analysis</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-<section class="interests">
-    <h2 data-lang-en="Interests" data-lang-de="Interessen">Interests</h2>
-    <div class="interest-categories">
-        <div class="interest-category">
-            <i class="fas fa-chart-line"></i>
-            <h3 data-lang-en="Economic Analysis" data-lang-de="Wirtschaftsanalyse">Economic Analysis</h3>
-            <p data-lang-en="Following global economic trends and market dynamics, analyzing economic data to uncover macroeconomic trends" data-lang-de="Verfolgen globaler Wirtschaftstrends und Marktdynamiken, Analyse von Wirtschaftsdaten zur Erkennung makroökonomischer Trends">Following global economic trends and market dynamics, analyzing economic data to uncover macroeconomic trends</p>
-        </div>
-        <div class="interest-category">
-            <i class="fas fa-chart-pie"></i>
-            <h3 data-lang-en="Financial Analysis" data-lang-de="Finanzanalyse">Financial Analysis</h3>
-            <p data-lang-en="Simulating investments and managing personal finances" data-lang-de="Simulation von Investitionen und Verwaltung persönlicher Finanzen">Simulating investments and managing personal finances</p>
-        </div>
-        <div class="interest-category">
-            <i class="fas fa-business-time"></i>
-            <h3 data-lang-en="Business Model Research" data-lang-de="Forschung zu Geschäftsmodellen">Business Model Research</h3>
-            <p data-lang-en="Interest in understanding what makes different business models thrive" data-lang-de="Interesse daran, zu verstehen, was erfolgreiche Geschäftsmodelle ausmacht">Interest in understanding what makes different business models thrive</p>
-        </div>
-        <div class="interest-category">
-            <i class="fas fa-plane"></i>
-            <p data-lang-en="Traveling" data-lang-de="Reisen">Traveling</p>
-        </div>
-    </div>
-</section>
+/* Content Area */
+/* Main content styling */
+.content {
+    padding: 30px;
+    flex: 1; /* Takes up remaining space */
+}
 
+.about-me, .background {
+    margin-bottom: 30px;
+}
 
-        </div>
-    </div>
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333; /* Dark gray color for headings */
+}
 
-    <script>
-        function switchLanguage(language) {
-            document.querySelectorAll("[data-lang-en]").forEach(function (element) {
-                const text = element.getAttribute("data-lang-" + language);
-                element.innerText = text;
-            });
-        }
-    </script>
-</body>
+p {
+    font-size: 16px;
+    color: #555; /* Medium gray text */
+    line-height: 1.6; /* Increased line spacing for readability */
+}
 
-</html>
+a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Skills Section */
+/* Layout for skill categories */
+.skill-categories {
+    display: flex;
+    flex-wrap: wrap; /* Wraps items to the next line if needed */
+    gap: 25px; /* Space between skill items */
+    margin-top: 20px;
+}
+
+.skill-category {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    width: calc(30% - 25px); /* Adjusts width with gap included */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light box shadow */
+    text-align: left;
+}
+
+.skill-category h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #444; /* Darker gray for skill titles */
+}
+
+.skill-category ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0; /* Resets default margin */
+}
+
+.skill-category ul li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #333; /* Dark gray text */
+    display: flex;
+    align-items: center;
+}
+
+.skill-category ul li i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #000; /* Black icons */
+} 
+
+/* Interests Section */
+/* Individual interest boxes */
+.interest-category {
+    display: flex; /* Flexbox layout to arrange icon and text horizontally */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items at the top */
+    border-radius: 8px; /* Rounded corners */
+    width: 100%; /* Full width */
+    max-width: 350px; /* Limit the maximum width for smaller devices */
+    text-align: left; /* Align text to the left */
+    transition: transform 0.2s ease;
+    border: none; /* Ensure no border is present */
+}
+
+/* Icon styling */
+.interest-category i {
+    font-size: 30px; /* Slightly smaller icon */
+    color: #87CEEB; /* Icon color */
+    margin-right: 15px; /* Space between icon and text */
+    flex: 0 0 50px; /* Fixed width for the icon to be in its own column */
+}
+
+/* Title styling */
+.interest-category h3 {
+    font-size: 18px; /* Bold title size */
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px 0; /* Margin around the title */
+}
+
+/* Description styling */
+.interest-category p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Container for multiple interest categories */
+.interest-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    gap: 20px; /* Add space between grid items */
+    justify-items: start; /* Align items to the start */
+}
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+    .interest-categories {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .interest-categories {
+        grid-template-columns: repeat(1, 1fr); /* Stack vertically on smallest screens */
+    }
+}
+
+/* Hover effect for interest category text boxes */
+.interest-category p:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+} 

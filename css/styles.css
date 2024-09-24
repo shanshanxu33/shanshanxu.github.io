@@ -123,6 +123,33 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* contact-section */
+.contact-section {
+    display: flex;
+    align-items: center;
+}
+
+.contact-section a {
+    margin-left: 15px;
+    color: #555;
+    /* Medium gray icon color */
+    font-size: 24px;
+}
+
+.contact-section a:hover {
+    color: #000;
+    /* Turns black on hover */
+}
+
+.contact-section p {
+    text-align: center; /* Center text */
+    font-size: 16px;
+    color: #555;
+    /* Medium gray text */
+    line-height: 1.6;
+    /* Increased line spacing for readability */
+}
+
 /* Content Area */
 /* Main content styling */
 .content {
@@ -244,7 +271,7 @@ a:hover {
     /* Prevent the icon from shrinking */
     margin-right: 15px;
     /* Space between icon and text */
-    font-size: 18px;
+    font-size: 15px;
     /* Size of the icon */
     color: #87CEEB;
     /* Icon color */

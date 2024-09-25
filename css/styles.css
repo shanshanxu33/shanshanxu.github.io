@@ -125,33 +125,41 @@ h1 {
 
 /* contact-section */
 .contact-section {
-    display: flex;
-    align-items: center;
+    display: block; /* Ensure each item takes up a full line */
+    margin-top: 15px;
+    text-align: center; /* Center all contact content */
 }
 
 .contact-section a {
-    margin-left: 15px;
+    display: block; /* Email icon on its own line */
+    margin-top: 10px;
+    font-size: 24px; /* Increase icon size if needed */
     color: #555;
-    /* Medium gray icon color */
+}
+
+.contact-section a i {
     font-size: 24px;
 }
 
 .contact-section a:hover {
-    color: #000;
-    /* Turns black on hover */
+    color: #000; /* Turns black on hover */
 }
 
+
 .contact-section p {
-    text-align: center; /* Center text */
-    font-size: 16px;
+    font-size: 18px;
     color: #555;
-    /* Medium gray text */
-    line-height: 1.6;
-    /* Increased line spacing for readability */
+    margin-bottom: 5px; 
+}
+
+.contact-section .contact-text {
+    display: block; /* "Contact me by email" on its own line */
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
 }
 
 /* Content Area */
-/* Main content styling */
 .content {
     padding: 30px;
     flex: 1;
@@ -326,6 +334,20 @@ a:hover {
         grid-template-columns: repeat(1, 1fr);
         /* Stack vertically on smallest screens */
     }
+}
+
+/* INS Icon */
+.ins-icon {
+    color: #555;
+    /* Medium gray icon color */
+    font-size: 18px;
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+.ins-icon:hover {
+    color: #000;
+    /* Turns black on hover */
 }
 
 /* Hover effect for interest category text boxes */

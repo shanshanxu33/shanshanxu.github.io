@@ -197,6 +197,93 @@ a:hover {
     /* Underline on hover */
 }
 
+/* Projects Section */
+.projects {
+    margin-bottom: 30px;
+}
+
+.projects h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+    /* Dark gray color for headings */
+}
+
+.projects p {
+    font-size: 16px;
+    color: #555;
+    /* Medium gray text */
+    line-height: 1.6;
+    /* Increased line spacing for readability */
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+/* Icon container styling */
+.icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px; /* 用于图标之间的间隔 */
+}
+
+.icons a {
+    color: #555;  
+    font-size: 20px; 
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #000;  
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    /* Maintain 3-column layout, even on smaller screens */
+    .project-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
 /* Skills Section */
 /* Layout for skill categories */
 .skill-categories {

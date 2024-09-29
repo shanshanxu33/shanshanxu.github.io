@@ -283,6 +283,36 @@ a:hover {
     }
 }
 
+/* Load More Button Styling */
+.load-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.load-more button {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    background-color: white;
+    color: #aaa;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.load-more button:hover {
+    color: #333;
+    border-color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
 
 /* Skills Section */
 /* Layout for skill categories */
